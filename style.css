@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Comfortaa', cursive;
+  user-select: none;
+}
+
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 30px;
+}
+
+img {
+  border: 2px solid black; /* Толщина рамки 3 пикселя, красный цвет */
+  border-radius: 5px; /* Закругление углов 5 пикселей */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Тень */
+  max-width: 100%; /* Максимальная ширина изображения 100% */
+  transition: 500ms;
+}
+
+img:hover {
+  transition: 500ms;
+  transform: scale(1.10);
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  transition: 0.5s;
+  font-size: 16px;
+}
+
+a:hover {
+  font-size: 17px;
+  transition: 0.5s;
+  color: #8da18a;
+}
+
+h3:hover {
+  font-size: 19px;
+  transition: 500ms;
+}
+
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  width: 100%;
+  height: 600px;
+  align-items: center;
+  justify-content: center;
+  background-image: url(https://images.unsplash.com/photo-1513106021000-168e5f56609d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.galery-container {
+  display: flex;
+  background-image: url('img/bgGAL2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.items-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.first-cont-img, .second-cont-img, .third-cont-img {
+  margin: 70px;
+}
+
+.first-cont-img h3,
+.second-cont-img h3,
+.third-cont-img h3,
+.main-container h3 {
+  font-size: 18px;
+  transition: 500ms;
+}
+
+.pluses-container {
+  display: flex;
+  background-image: url('img/bgSEC3.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+}
+
+.fcolomun-container {
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+.scolomun-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+.pluses-container img {
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+.comments-container {
+  display: flex;
+  flex-direction: column;
+  background-image: url('img/bgCOM1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.firstcom-container, .secondcom-container, .thirdcom-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 80px;
+}
+
+.area1, .area2 , .area3 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+}
+
+.new-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background-image: url('img/bgEND1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.areaNews {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.new-container img {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.foot {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+.foot a {
+  text-decoration: none;
+  color: white;
+  transition: 0.5s;
+  font-size: 16px;
+}
+
+.foot a:hover {
+  font-size: 17px;
+  transition: 0.5s;
+}
+
+.moving-text-container {
+  position: relative;
+  width: 100%;
+  height: 50px; /* установка высоты контейнера */
+  overflow: hidden;
+  background-color: #FFC107; /* темно желтый фон */
+}
+
+.moving-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap; /* текст не будет переноситься на новую строку */
+  animation: move-text 50s linear infinite; /* анимация движения текста */
+}
+
+@keyframes move-text {
+  0% {
+    transform: translateX(0%); /* начальное положение текста */
+  }
+  100% {
+    transform: translateX(100%); /* конечное положение текста */
+  }
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  display: none;
+}
+
+#overlay.show {
+  display: block;
+}
+
+#overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  display: block;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
